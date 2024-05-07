@@ -6,7 +6,7 @@
     <title>Validação de Formulário</title>
 </head>
 <body>
-    <form id="myForm">
+    <form id="myForm" onsubmit="return validateForm()">
         <label for="name">Nome:</label><br>
         <input type="text" id="name" name="name" maxlength="100"><br>
         
@@ -16,7 +16,7 @@
         <label for="phone">Telefone:</label><br>
         <input type="text" id="phone" name="phone" placeholder="(00) 00000-0000"><br>
         
-        <button type="button" onclick="validateForm()">Submit</button>
+        <button type="submit">Submit</button>
     </form>
 
     <script src="script.js"></script>
