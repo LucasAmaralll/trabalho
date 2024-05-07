@@ -3,7 +3,7 @@ function validateForm() {
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
     
-    var nameRegex = /^[^\d]+$/;
+    var nameRegex = /^[^\d]{1,100}$/;
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     var phoneRegex = /^\(\d{2}\) \d{5}-\d{4}$/;
 

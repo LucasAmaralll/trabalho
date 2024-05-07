@@ -7,8 +7,8 @@
 
 ### Expressões Regulares Utilizadas:
 
-1. **nameRegex**: /^[^\d]+$/ - Não pode conter números.
-   - Explicação: Esta expressão regular nega qualquer dígito (\d) no campo do nome. O início (^) e o fim ($) garantem que a correspondência ocorra em toda a string, e o símbolo "+" indica que deve haver um ou mais caracteres que não são dígitos. Portanto, o campo do nome não pode conter números.
+1. **nameRegex**: /^[^\d]{1,100}$/ - Não pode conter números e deve ter de 1 a 100 caracteres.
+   - Explicação: Esta expressão regular nega qualquer dígito (\d) no campo do nome. O quantificador "{1,100}" indica que o nome deve ter de 1 a 100 caracteres. Portanto, o campo do nome não pode conter números e deve ter no máximo 100 caracteres.
 
 2. **emailRegex**: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ - Email válido.
    - Explicação: Esta expressão regular valida o formato básico de um endereço de email. Ela garante que o email contenha pelo menos um caractere antes do "@" e pelo menos um caractere antes e depois do ponto final no domínio. Além disso, nega espaços em branco (\s) em qualquer parte do endereço de email.
